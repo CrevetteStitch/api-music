@@ -1,0 +1,38 @@
+[
+  {
+      "id" : 1,
+      "cover" : "rammstein.png",
+      "sound" : "Rammstein-Sonne.mp3",
+      "title" : "Rammstein Sonne",
+      "category" : "Metal"
+  },
+  {
+      "id" : 2,
+      "cover" : "rammstein.png",
+      "sound" : "Rammstein-Du-Hast.mp3",
+      "title" : "Rammstein Du Hast",
+      "category" : "Metal"
+  },
+  {
+      "id" : 3,
+      "cover" : "rammstein.png",
+      "sound" : "Dicke-Titten.mp3",
+      "title" : "Rammstein Dikken",
+      "category" : "Metal"
+  },
+  {
+      "id" : 4,
+      "cover" : "lorenzo.jpg",
+      "sound" : "Lorenzo-Je-vous-deteste-tous.mp3",
+      "title" : "Je vous déteste tous",
+      "category" : "Rap"
+  },
+  {
+      "id" : 5,
+      "cover" : "Another-Love.png",
+      "sound" : "Another-Love.mp3",
+      "title" : "Another Love",
+      "category" : "Calme"
+  }
+
+]

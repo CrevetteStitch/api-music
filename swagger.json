@@ -1,0 +1,122 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de gestion de musique",
+        "version": "1.0.0",
+        "description": "Une API pour gérer des informations sur la musique."
+    },
+    "paths": {
+        "/api/v1/": {
+            "get": {
+                "summary": "RACINE API",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": "RACINE API"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Créer une ressource",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "success": "bounty"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/musics": {
+            "get": {
+                "summary": "Obtenir la liste des musiques",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Créer une nouvelle musique",
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/musics/{id}": {
+            "get": {
+                "summary": "Obtenir une musique par ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID de la musique",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {}
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Supprimer une musique par ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID de la musique à supprimer",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Succès",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "message": "Suppression effectuée."
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
