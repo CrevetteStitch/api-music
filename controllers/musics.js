@@ -43,7 +43,7 @@ const controllerMusic =
                 id:idMusic
             }
         });
-        res.status(200).json({message: `Music ${title} deleted`})
+        res.status(200).json({message: `Music deleted`})
     },
 
     random: (req, res) => {
