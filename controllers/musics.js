@@ -21,7 +21,7 @@ const controllerMusic =
         console.log(req.body);
         const data = await Music.create(req.body);
         console.log(data);
-        res.status(201).json({ message: "votre musique a été ajoutée", data: req.body });
+        res.status(201).json({ message: "Music created", data: req.body });
     },
 
     findById: (req, res) => {
@@ -33,7 +33,7 @@ const controllerMusic =
             return res.status(404).json({ error: "ID not found ..." });
         }
 
-        return res.status(200).json({ result: data[id - 1] });
+        return res.status(200).json({ result: data[id + 1] });
     },
 
     delete: async (req, res) => {
@@ -43,7 +43,7 @@ const controllerMusic =
                 id:idMusic
             }
         });
-        res.status(200).json({message: "Suppression effectuée."})
+        res.status(200).json({message: `Music ${title} deleted`})
     },
 
     random: (req, res) => {
