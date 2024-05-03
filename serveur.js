@@ -17,8 +17,14 @@ app.use(`/api/${version}`, router);
 app.use(`/api-docs`, swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 db.sync().then(() => {
+  // const data = require('./models/data.json');
+  // const Music = require('./models/Musics');
+  // data.forEach(async (music) => {
+  //   await Music.create(music);
+  // });
   console.log('DBConnect est synchronisé')
   app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
   });
 })
+
