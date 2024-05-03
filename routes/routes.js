@@ -16,5 +16,7 @@ router.post('/musics', controllerMusic.create);
 router.delete('/musics/:id', controllerMusic.delete);
 router.get('/musics!:id', controllerMusic.findById);
 router.get('/musics/random', controllerMusic.random);
+router.get('/assets/:media/:cover',controllerMusic.upload);
+
 
 module.exports = router;

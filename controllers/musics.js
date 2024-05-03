@@ -46,9 +46,27 @@ const controllerMusic =
         res.status(200).json({message: `Music deleted`})
     },
 
+    
+
     random: (req, res) => {
 
-    }
+    },
+
+    upload: (req, res) => {
+        const fileName = req.params.fileName;
+        const directory = req.params.directory;
+        if (directory !== "cover" && directory !== "music") {
+            return res.status(400).json({ error: "Directory not exist ! It's cover or music" });
+        }
+        const filePath = path.resolve(`./assets/${directory}/${fileName}`);
+        if (fs.existsSync(filePath)) {
+            // Envoyer le fichier au client sans le télécharger
+            return res.sendFile(filePath);
+        } else {
+            return res.status(404).json({ error: "File not found" });
+        }
+    },
+
 }
 
 module.exports = controllerMusic;
